@@ -1,196 +1,631 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <title>Stream Flix - Toutes les séries</title>
-
-    <!-- Viewport mobile tag for sensible mobile support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="Identifier-URL" content="http://streamflix.pw/">
-
-    
-    <meta name="keywords" content="séries, séries en streaming, regarder série en streaming, streamflix, streamflix.pw, Toutes les séries">
-    
-    <meta name="description" content="Streamflix est le premier index de liens streaming pour ce qui est des séries.">
-    
-    <meta name="author" content="streamflix">   
-    
-    <link rel="stylesheet" href="http://streamflix.pw/styles/bootstrap.min.css">
-    <link rel="stylesheet" href="http://streamflix.pw/styles/Official_-_Dark_theme.css">
-    <link rel="stylesheet" href="http://streamflix.pw/styles/detailed-info.css">
-    <link rel="stylesheet" href="http://streamflix.pw/styles/frame.css">
-    <link rel="stylesheet" href="http://streamflix.pw/styles/header.css">
-    <link rel="stylesheet" href="http://streamflix.pw/styles/item.css">
-    <link rel="stylesheet" href="http://streamflix.pw/styles/logo.css">
-
-<body>
-<body class="tos-desktop">
-
-  <div class="background">
-        <div id="header">
-
-            <div class="background-blur"></div>
-
-            <div class="title">
-                <a style="color: inherit;text-decoration:none;" href="/">
-                    <div style="color:red" class="logo"><span>S </span><span>T </span><span>R</span><span>E</span><span>A</span><span>M</span><span>F</span><span>L</span><span>I</span><span>X</span></div>
-                </a>
-            </div>
-
-            <div class="movies" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bientôt ;)">
-                <a style="color: inherit;text-decoration:none;" href="#" onclick="return false;">Films</a>
-            </div>
-
-            <div class="tv-series selected">
-                <a href="/series" style=" color: inherit; text-decoration: none">Séries&nbsp;TV</a>
-            </div>
-
-            <div class="sort-by">
-                <ul>
-                    <li id="menu" class="dropdown filter sorters">Trier par
+   <head>
+      <title>Stream Flix - Toutes les séries</title>
+      <!-- Viewport mobile tag for sensible mobile support -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <meta name="Identifier-URL" content="http://streamflix.pw/">
+      <meta name="keywords" content="séries, séries en streaming, regarder série en streaming, streamflix, streamflix.pw, Toutes les séries">
+      <meta name="description" content="Streamflix est le premier index de liens streaming pour ce qui est des séries.">
+      <meta name="author" content="streamflix">
+      <link rel="stylesheet" href="http://streamflix.pw/styles/bootstrap.min.css">
+      <link rel="stylesheet" href="http://streamflix.pw/styles/Official_-_Dark_theme.css">
+      <link rel="stylesheet" href="http://streamflix.pw/styles/detailed-info.css">
+      <link rel="stylesheet" href="http://streamflix.pw/styles/frame.css">
+      <link rel="stylesheet" href="http://streamflix.pw/styles/header.css">
+      <link rel="stylesheet" href="http://streamflix.pw/styles/item.css">
+      <link rel="stylesheet" href="http://streamflix.pw/styles/logo.css">
+   <body>
+      <body class="tos-desktop">
+         <div class="background">
+            <div id="header">
+               <div class="background-blur"></div>
+               <div class="title">
+                  <a style="color: inherit;text-decoration:none;" href="/">
+                     <div style="color:red" class="logo"><span>S </span><span>T </span><span>R</span><span>E</span><span>A</span><span>M</span><span>F</span><span>L</span><span>I</span><span>X</span></div>
+                  </a>
+               </div>
+               <div class="movies" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bientôt ;)">
+                  <a style="color: inherit;text-decoration:none;" href="#" onclick="return false;">Films</a>
+               </div>
+               <div class="tv-series selected">
+                  <a href="/series" style=" color: inherit; text-decoration: none">Séries&nbsp;TV</a>
+               </div>
+               <div class="sort-by">
+                  <ul>
+                     <li id="menu" class="dropdown filter sorters">
+                        Trier par
                         <a style="color: inherit;text-decoration:none;" class="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;">
-                                <span id="dropdown-menu-default" class="value">Mise à jour</span>
+                        <span id="dropdown-menu-default" class="value">Mise à jour</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a id="newest" href="/series/newest">Mise à jour</a></li>
-                            <li><a id="year" href="/series/year">Année</a></li>
-                            <li><a id="name" href="/series/name">Nom</a></li>
-                            <li><a id="note" href="/series/note">Note</a></li>
+                           <li><a id="newest" href="/series/newest">Mise à jour</a></li>
+                           <li><a id="year" href="/series/year">Année</a></li>
+                           <li><a id="name" href="/series/name">Nom</a></li>
+                           <li><a id="note" href="/series/note">Note</a></li>
                         </ul>
-                    </li>
-                </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="genre-sort"></div>
+               <div class="settings" data-toggle="tooltip" data-placement="left" title="" data-original-title="Bientôt ;)"><a href="#"><i class="glyphicon glyphicon-cog"></i></a></div>
+               <div class="queue" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bientôt ;)"><a href="#"><i class="glyphicon glyphicon-plus"></i></a></div>
+               <div class="about"><a href="/a-propos"><i class="glyphicon glyphicon-info-sign"></i></a></div>
+               <div class="favorites" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bientôt ;)"><a href="#"><i class="glyphicon glyphicon-heart"></i></a></div>
+               <div class=""></div>
+               <form class="SearchField">
+                  <input id="search_serie" type="search" placeholder="Rechercher" value="">
+               </form>
             </div>
-
-            <div class="genre-sort"></div>
-            <div class="settings" data-toggle="tooltip" data-placement="left" title="" data-original-title="Bientôt ;)"><a href="#"><i class="glyphicon glyphicon-cog"></i></a></div>
-            <div class="queue" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bientôt ;)"><a href="#"><i class="glyphicon glyphicon-plus"></i></a></div>
-            <div class="about"><a href="/a-propos"><i class="glyphicon glyphicon-info-sign"></i></a></div>
-            <div class="favorites" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bientôt ;)"><a href="#"><i class="glyphicon glyphicon-heart"></i></a></div>
-            <div class=""></div>
-
-
-            <form class="SearchField">
-                <input id="search_serie" type="search" placeholder="Rechercher" value="">
-            </form>
-
-        </div>
-
-        <div id="wrapper" class="active">
-<div class="main-window-region">
-   <div id="main-window">
-      <div id="movie-detail">
-         <div class="shows-container-contain">
-            <div class="fa fa-times close-icon"></div>
-            <div class="tv-poster">
-               <div class="tv-poster-background fadein" style="background-image: url(&quot;http://fr.web.img4.acsta.net/medias/nmedia/18/77/63/03/19626801.jpg&quot;); background-position-y: 55%;">
-                  <div class="tv-poster-overlay"></div>
-               </div>
-               <div class="tv-cover fadein" style="background-image: url(http://fr.web.img4.acsta.net/medias/nmedia/18/77/63/03/19626801.jpg),url('/../images/posterholder.png');"></div>
-               <div class="tv-meta-data">
-                  <div class="tv-title">Shameless (US) </div>
-                  <div class="tv-year">2011-01-09 </div>
-                  <div class="tv-dot"></div>
-                  <div class="tv-runtime">45  min</div>
-                  <div class="tv-dot"></div>
-                  <div class="tv-status">Terminé</div>
-                  <div class="tv-dot"></div>
-                  <div class="tv-genre">drama</div>
-                  <div class="tv-dot"></div>
-                  <div class="rating-container-tv">
-                  <div data-toggle="tooltip" class="star-container-tv">
-                        <div class="stars"><span class="star on"></span><span class="star on"></span><span class="star on"></span><span class="star on"></span><span class="star"></span></div>
-                  </div>
-                  <!-- <div class="number-container-tv">9.4 <em>/10</em></div> -->
-                  </div>
-                  <div class="tv-overview">Pour les enfants Gallagher, la vie est tout sauf un long fleuve tranquille. Fiona, l'aînée, âgée de 20 ans, élève du mieux possible sa soeur et ses quatre frères. Leur mère les a abandonnés. Quant à leur père, Frank, paumé, chômeur et alcoolique, il dilapide l'argent des allocations familiales. </div>
-
-               </div>
-            </div>
-            <div class="episode-base">
-
-               <div class="episode-info">
-
-                    <div id="video-player"><div class="tos-wrapper tos-inline tos-fx-slide tos-fit tos-opening tos-hover tos-opened"><div class="tos-slider" style="left: 0%;"><div class="tos-slide" style="width: 100%;"><iframe id="player-style" src="http://www.purevid.com/?m=embed&amp;id=251uufeoq12kntrjd7493" width="640px" height="380px" scrolling="no" frameborder="0"></iframe></div></div></div></div>
-
-                      <div class="movie-btn-episode ">
-                           <button type="button" id="menu-toggle" class="btn btn-primary ">Commentaires</button>
-
-                           <!-- Single button -->
-                           <div class="languages btn-group dropup">
-                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                               Langue <span class="caret"></span>
-                             </button>
-                             <ul class="dropdown-menu"><li><a onclick="return false" value="VOSTFR" class="" href="#">VOSTFR</a></li><li><a onclick="return false" value="FR" class="active" href="#">FR</a></li></ul>
+            <div id="wrapper" class="active">
+               <div class="main-window-region">
+                  <div id="main-window">
+                     <div id="movie-detail">
+                        <div class="shows-container-contain">
+                           <div class="fa fa-times close-icon"></div>
+                           <div class="tv-poster">
+                              <div class="tv-poster-background fadein" style="background-image: url(&quot;http://fr.web.img4.acsta.net/medias/nmedia/18/77/63/03/19626801.jpg&quot;); background-position-y: 55%;">
+                                 <div class="tv-poster-overlay"></div>
+                              </div>
+                              <div class="tv-cover fadein" style="background-image: url(http://fr.web.img4.acsta.net/medias/nmedia/18/77/63/03/19626801.jpg),url('/../images/posterholder.png');"></div>
+                              <div class="tv-meta-data">
+                                 <div class="tv-title">Shameless (US) </div>
+                                 <div class="tv-year">2011-01-09 </div>
+                                 <div class="tv-dot"></div>
+                                 <div class="tv-runtime">45  min</div>
+                                 <div class="tv-dot"></div>
+                                 <div class="tv-status">Terminé</div>
+                                 <div class="tv-dot"></div>
+                                 <div class="tv-genre">drama</div>
+                                 <div class="tv-dot"></div>
+                                 <div class="rating-container-tv">
+                                    <div data-toggle="tooltip" class="star-container-tv">
+                                       <div class="stars"><span class="star on"></span><span class="star on"></span><span class="star on"></span><span class="star on"></span><span class="star"></span></div>
+                                    </div>
+                                    <!-- <div class="number-container-tv">9.4 <em>/10</em></div> -->
+                                 </div>
+                                 <div class="tv-overview">Pour les enfants Gallagher, la vie est tout sauf un long fleuve tranquille. Fiona, l'aînée, âgée de 20 ans, élève du mieux possible sa soeur et ses quatre frères. Leur mère les a abandonnés. Quant à leur père, Frank, paumé, chômeur et alcoolique, il dilapide l'argent des allocations familiales. </div>
+                              </div>
                            </div>
-
-                           <!-- Single button -->
-                           <div class="players btn-group dropup">
-                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                               Lecteur <span class="caret"></span>
-                             </button>
-                             <ul class="dropdown-menu"><li><a onclick="return false" value="exashare" class="" href="#">Exashare</a></li><li><a onclick="return false" value="purevid" class="active" href="#">Purevid</a></li><li><a onclick="return false" value="co/embed/-pteLIpsQs8" class="" href="#">Co/embed/-pteLIpsQs8</a></li><li><a onclick="return false" value="co/embed/sjjIpTk4z14" class="" href="#">Co/embed/sjjIpTk4z14</a></li></ul>
+                           <div class="episode-base">
+                              <div class="episode-info">
+                                 <div id="video-player">
+                                    <div class="tos-wrapper tos-inline tos-fx-slide tos-fit tos-opening tos-hover tos-opened">
+                                       <div class="tos-slider" style="left: 0%;">
+                                          <div class="tos-slide" style="width: 100%;"><iframe id="player-style" src="http://www.purevid.com/?m=embed&amp;id=251uufeoq12kntrjd7493" width="640px" height="380px" scrolling="no" frameborder="0"></iframe></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="movie-btn-episode ">
+                                    <button type="button" id="menu-toggle" class="btn btn-primary ">Commentaires</button>
+                                    <!-- Single button -->
+                                    <div class="languages btn-group dropup">
+                                       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       Langue <span class="caret"></span>
+                                       </button>
+                                       <ul class="dropdown-menu">
+                                          <li><a onclick="return false" value="VOSTFR" class="" href="#">VOSTFR</a></li>
+                                          <li><a onclick="return false" value="FR" class="active" href="#">FR</a></li>
+                                       </ul>
+                                    </div>
+                                    <!-- Single button -->
+                                    <div class="players btn-group dropup">
+                                       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       Lecteur <span class="caret"></span>
+                                       </button>
+                                       <ul class="dropdown-menu">
+                                          <li><a onclick="return false" value="exashare" class="" href="#">Exashare</a></li>
+                                          <li><a onclick="return false" value="purevid" class="active" href="#">Purevid</a></li>
+                                          <li><a onclick="return false" value="co/embed/-pteLIpsQs8" class="" href="#">Co/embed/-pteLIpsQs8</a></li>
+                                          <li><a onclick="return false" value="co/embed/sjjIpTk4z14" class="" href="#">Co/embed/sjjIpTk4z14</a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div id="target"></div>
+                              </div>
+                              <div class="display-base-title">
+                                 <div class="episode-list-seasons">Saisons</div>
+                                 <div class="episode-list-episodes">Épisodes</div>
+                              </div>
+                              <div class="season-episode-container">
+                                 <div class="tabs-base">
+                                    <div class="tabs-seasons">
+                                       <ul>
+                                          <li saison="1" class="tab-season active"><a>Saison 1</a></li>
+                                          <li saison="2" class="tab-season"><a>Saison 2</a></li>
+                                          <li saison="3" class="tab-season"><a>Saison 3</a></li>
+                                          <li saison="4" class="tab-season"><a>Saison 4</a></li>
+                                          <li saison="5" class="tab-season"><a>Saison 5</a></li>
+                                          <li saison="6" class="tab-season"><a>Saison 6</a></li>
+                                       </ul>
+                                    </div>
+                                    <div class="tabs-episodes">
+                                       <div class="tab-episodes saison-1" style="display: block;">
+                                          <ul>
+                                             <li episode="1" saison="1" class="tab-episode active">
+                                                <a class="episodeData">
+                                                   <span>1</span>
+                                                   <div>Episode 1</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="true" style="float: right; font-size: 1.2em; color: rgb(255, 255, 255);" id="saison-1-episode-1" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="2" saison="1" class="tab-episode">
+                                                <a class="episodeData">
+                                                   <span>2</span>
+                                                   <div>Episode 2</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-2" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="3" saison="1" class="tab-episode">
+                                                <a class="episodeData">
+                                                   <span>3</span>
+                                                   <div>Episode 3</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-3" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="4" saison="1" class="tab-episode">
+                                                <a class="episodeData">
+                                                   <span>4</span>
+                                                   <div>Episode 4</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-4" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="5" saison="1" class="tab-episode">
+                                                <a class="episodeData">
+                                                   <span>5</span>
+                                                   <div>Episode 5</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-5" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="6" saison="1" class="tab-episode">
+                                                <a class="episodeData">
+                                                   <span>6</span>
+                                                   <div>Episode 6</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-6" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="7" saison="1" class="tab-episode">
+                                                <a class="episodeData">
+                                                   <span>7</span>
+                                                   <div>Episode 7</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-7" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="8" saison="1" class="tab-episode">
+                                                <a class="episodeData">
+                                                   <span>8</span>
+                                                   <div>Episode 8</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-8" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="9" saison="1" class="tab-episode">
+                                                <a class="episodeData">
+                                                   <span>9</span>
+                                                   <div>Episode 9</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-9" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="10" saison="1" class="tab-episode">
+                                                <a class="episodeData">
+                                                   <span>10</span>
+                                                   <div>Episode 10</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-10" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="11" saison="1" class="tab-episode">
+                                                <a class="episodeData">
+                                                   <span>11</span>
+                                                   <div>Episode 11</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-11" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="12" saison="1" class="tab-episode">
+                                                <a class="episodeData">
+                                                   <span>12</span>
+                                                   <div>Episode 12</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-12" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                       <div class="tab-episodes saison-2" style="display: none;">
+                                          <ul>
+                                             <li episode="1" saison="2" class="tab-episode active">
+                                                <a class="episodeData">
+                                                   <span>1</span>
+                                                   <div>Episode 1</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-1" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="2" saison="2" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>2</span>
+                                                   <div>Episode 2</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-2" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="3" saison="2" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>3</span>
+                                                   <div>Episode 3</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-3" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="4" saison="2" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>4</span>
+                                                   <div>Episode 4</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-4" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="5" saison="2" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>5</span>
+                                                   <div>Episode 5</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-5" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="6" saison="2" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>6</span>
+                                                   <div>Episode 6</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-6" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="7" saison="2" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>7</span>
+                                                   <div>Episode 7</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-7" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="8" saison="2" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>8</span>
+                                                   <div>Episode 8</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-8" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="9" saison="2" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>9</span>
+                                                   <div>Episode 9</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-9" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="10" saison="2" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>10</span>
+                                                   <div>Episode 10</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-10" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="11" saison="2" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>11</span>
+                                                   <div>Episode 11</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-11" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="12" saison="2" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>12</span>
+                                                   <div>Episode 12</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-12" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                       <div class="tab-episodes saison-3" style="display: none;">
+                                          <ul>
+                                             <li episode="1" saison="3" class="tab-episode active">
+                                                <a class="episodeData">
+                                                   <span>1</span>
+                                                   <div>Episode 1</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-1" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="2" saison="3" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>2</span>
+                                                   <div>Episode 2</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-2" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="3" saison="3" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>3</span>
+                                                   <div>Episode 3</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-3" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="4" saison="3" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>4</span>
+                                                   <div>Episode 4</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-4" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="5" saison="3" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>5</span>
+                                                   <div>Episode 5</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-5" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="6" saison="3" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>6</span>
+                                                   <div>Episode 6</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-6" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="7" saison="3" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>7</span>
+                                                   <div>Episode 7</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-7" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="8" saison="3" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>8</span>
+                                                   <div>Episode 8</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-8" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="9" saison="3" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>9</span>
+                                                   <div>Episode 9</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-9" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="10" saison="3" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>10</span>
+                                                   <div>Episode 10</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-10" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="11" saison="3" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>11</span>
+                                                   <div>Episode 11</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-11" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="12" saison="3" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>12</span>
+                                                   <div>Episode 12</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-12" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                       <div class="tab-episodes saison-4" style="display: none;">
+                                          <ul>
+                                             <li episode="1" saison="4" class="tab-episode active">
+                                                <a class="episodeData">
+                                                   <span>1</span>
+                                                   <div>Episode 1</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-1" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="2" saison="4" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>2</span>
+                                                   <div>Episode 2</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-2" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="3" saison="4" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>3</span>
+                                                   <div>Episode 3</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-3" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="4" saison="4" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>4</span>
+                                                   <div>Episode 4</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-4" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="5" saison="4" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>5</span>
+                                                   <div>Episode 5</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-5" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="6" saison="4" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>6</span>
+                                                   <div>Episode 6</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-6" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="7" saison="4" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>7</span>
+                                                   <div>Episode 7</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-7" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="8" saison="4" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>8</span>
+                                                   <div>Episode 8</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-8" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="9" saison="4" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>9</span>
+                                                   <div>Episode 9</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-9" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="10" saison="4" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>10</span>
+                                                   <div>Episode 10</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-10" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="11" saison="4" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>11</span>
+                                                   <div>Episode 11</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-11" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="12" saison="4" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>12</span>
+                                                   <div>Episode 12</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-12" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                       <div class="tab-episodes saison-5" style="display: none;">
+                                          <ul>
+                                             <li episode="1" saison="5" class="tab-episode active">
+                                                <a class="episodeData">
+                                                   <span>1</span>
+                                                   <div>Episode 1</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-1" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="2" saison="5" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>2</span>
+                                                   <div>Episode 2</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-2" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="3" saison="5" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>3</span>
+                                                   <div>Episode 3</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-3" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="4" saison="5" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>4</span>
+                                                   <div>Episode 4</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-4" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="5" saison="5" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>5</span>
+                                                   <div>Episode 5</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-5" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="6" saison="5" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>6</span>
+                                                   <div>Episode 6</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-6" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="7" saison="5" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>7</span>
+                                                   <div>Episode 7</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-7" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="8" saison="5" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>8</span>
+                                                   <div>Episode 8</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-8" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="9" saison="5" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>9</span>
+                                                   <div>Episode 9</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-9" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="10" saison="5" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>10</span>
+                                                   <div>Episode 10</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-10" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="11" saison="5" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>11</span>
+                                                   <div>Episode 11</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-11" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                             <li episode="12" saison="5" class="tab-episode ">
+                                                <a class="episodeData">
+                                                   <span>12</span>
+                                                   <div>Episode 12</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-12" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                       <div class="tab-episodes saison-6" style="display: none;">
+                                          <ul>
+                                             <li episode="1" saison="6" class="tab-episode">
+                                                <a class="episodeData">
+                                                   <span>1</span>
+                                                   <div>Episode 1</div>
+                                                </a>
+                                                <i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-6-episode-1" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                    <!--End tabs-episode-base-->
+                                 </div>
+                                 <!--End tabs_base-->
+                              </div>
+                              <!--End season-episode-container-->
                            </div>
-
-                    </div>
-
-               <div id="target"></div>
-               </div>
-
-               <div class="display-base-title">
-                  <div class="episode-list-seasons">Saisons</div>
-                  <div class="episode-list-episodes">Épisodes</div>
-               </div>
-
-               <div class="season-episode-container">
-                  <div class="tabs-base">
-                     <div class="tabs-seasons">
-                        <ul>
-                        <li saison="1" class="tab-season active"><a>Saison 1</a></li><li saison="2" class="tab-season"><a>Saison 2</a></li><li saison="3" class="tab-season"><a>Saison 3</a></li><li saison="4" class="tab-season"><a>Saison 4</a></li><li saison="5" class="tab-season"><a>Saison 5</a></li><li saison="6" class="tab-season"><a>Saison 6</a></li></ul>
+                        </div>
                      </div>
-                     <div class="tabs-episodes">
-
-                     <div class="tab-episodes saison-1" style="display: block;"><ul><li episode="1" saison="1" class="tab-episode active"><a class="episodeData"><span>1</span><div>Episode 1</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="true" style="float: right; font-size: 1.2em; color: rgb(255, 255, 255);" id="saison-1-episode-1" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="2" saison="1" class="tab-episode"><a class="episodeData"><span>2</span><div>Episode 2</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-2" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="3" saison="1" class="tab-episode"><a class="episodeData"><span>3</span><div>Episode 3</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-3" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="4" saison="1" class="tab-episode"><a class="episodeData"><span>4</span><div>Episode 4</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-4" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="5" saison="1" class="tab-episode"><a class="episodeData"><span>5</span><div>Episode 5</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-5" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="6" saison="1" class="tab-episode"><a class="episodeData"><span>6</span><div>Episode 6</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-6" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="7" saison="1" class="tab-episode"><a class="episodeData"><span>7</span><div>Episode 7</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-7" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="8" saison="1" class="tab-episode"><a class="episodeData"><span>8</span><div>Episode 8</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-8" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="9" saison="1" class="tab-episode"><a class="episodeData"><span>9</span><div>Episode 9</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-9" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="10" saison="1" class="tab-episode"><a class="episodeData"><span>10</span><div>Episode 10</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-10" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="11" saison="1" class="tab-episode"><a class="episodeData"><span>11</span><div>Episode 11</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-11" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="12" saison="1" class="tab-episode"><a class="episodeData"><span>12</span><div>Episode 12</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-1-episode-12" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li></ul></div><div class="tab-episodes saison-2" style="display: none;"><ul><li episode="1" saison="2" class="tab-episode active"><a class="episodeData"><span>1</span><div>Episode 1</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-1" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="2" saison="2" class="tab-episode "><a class="episodeData"><span>2</span><div>Episode 2</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-2" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="3" saison="2" class="tab-episode "><a class="episodeData"><span>3</span><div>Episode 3</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-3" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="4" saison="2" class="tab-episode "><a class="episodeData"><span>4</span><div>Episode 4</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-4" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="5" saison="2" class="tab-episode "><a class="episodeData"><span>5</span><div>Episode 5</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-5" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="6" saison="2" class="tab-episode "><a class="episodeData"><span>6</span><div>Episode 6</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-6" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="7" saison="2" class="tab-episode "><a class="episodeData"><span>7</span><div>Episode 7</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-7" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="8" saison="2" class="tab-episode "><a class="episodeData"><span>8</span><div>Episode 8</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-8" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="9" saison="2" class="tab-episode "><a class="episodeData"><span>9</span><div>Episode 9</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-9" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="10" saison="2" class="tab-episode "><a class="episodeData"><span>10</span><div>Episode 10</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-10" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="11" saison="2" class="tab-episode "><a class="episodeData"><span>11</span><div>Episode 11</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-11" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="12" saison="2" class="tab-episode "><a class="episodeData"><span>12</span><div>Episode 12</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-2-episode-12" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li></ul></div><div class="tab-episodes saison-3" style="display: none;"><ul><li episode="1" saison="3" class="tab-episode active"><a class="episodeData"><span>1</span><div>Episode 1</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-1" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="2" saison="3" class="tab-episode "><a class="episodeData"><span>2</span><div>Episode 2</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-2" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="3" saison="3" class="tab-episode "><a class="episodeData"><span>3</span><div>Episode 3</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-3" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="4" saison="3" class="tab-episode "><a class="episodeData"><span>4</span><div>Episode 4</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-4" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="5" saison="3" class="tab-episode "><a class="episodeData"><span>5</span><div>Episode 5</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-5" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="6" saison="3" class="tab-episode "><a class="episodeData"><span>6</span><div>Episode 6</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-6" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="7" saison="3" class="tab-episode "><a class="episodeData"><span>7</span><div>Episode 7</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-7" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="8" saison="3" class="tab-episode "><a class="episodeData"><span>8</span><div>Episode 8</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-8" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="9" saison="3" class="tab-episode "><a class="episodeData"><span>9</span><div>Episode 9</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-9" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="10" saison="3" class="tab-episode "><a class="episodeData"><span>10</span><div>Episode 10</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-10" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="11" saison="3" class="tab-episode "><a class="episodeData"><span>11</span><div>Episode 11</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-11" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="12" saison="3" class="tab-episode "><a class="episodeData"><span>12</span><div>Episode 12</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-3-episode-12" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li></ul></div><div class="tab-episodes saison-4" style="display: none;"><ul><li episode="1" saison="4" class="tab-episode active"><a class="episodeData"><span>1</span><div>Episode 1</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-1" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="2" saison="4" class="tab-episode "><a class="episodeData"><span>2</span><div>Episode 2</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-2" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="3" saison="4" class="tab-episode "><a class="episodeData"><span>3</span><div>Episode 3</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-3" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="4" saison="4" class="tab-episode "><a class="episodeData"><span>4</span><div>Episode 4</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-4" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="5" saison="4" class="tab-episode "><a class="episodeData"><span>5</span><div>Episode 5</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-5" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="6" saison="4" class="tab-episode "><a class="episodeData"><span>6</span><div>Episode 6</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-6" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="7" saison="4" class="tab-episode "><a class="episodeData"><span>7</span><div>Episode 7</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-7" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="8" saison="4" class="tab-episode "><a class="episodeData"><span>8</span><div>Episode 8</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-8" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="9" saison="4" class="tab-episode "><a class="episodeData"><span>9</span><div>Episode 9</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-9" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="10" saison="4" class="tab-episode "><a class="episodeData"><span>10</span><div>Episode 10</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-10" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="11" saison="4" class="tab-episode "><a class="episodeData"><span>11</span><div>Episode 11</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-11" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="12" saison="4" class="tab-episode "><a class="episodeData"><span>12</span><div>Episode 12</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-4-episode-12" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li></ul></div><div class="tab-episodes saison-5" style="display: none;"><ul><li episode="1" saison="5" class="tab-episode active"><a class="episodeData"><span>1</span><div>Episode 1</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-1" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="2" saison="5" class="tab-episode "><a class="episodeData"><span>2</span><div>Episode 2</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-2" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="3" saison="5" class="tab-episode "><a class="episodeData"><span>3</span><div>Episode 3</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-3" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="4" saison="5" class="tab-episode "><a class="episodeData"><span>4</span><div>Episode 4</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-4" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="5" saison="5" class="tab-episode "><a class="episodeData"><span>5</span><div>Episode 5</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-5" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="6" saison="5" class="tab-episode "><a class="episodeData"><span>6</span><div>Episode 6</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-6" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="7" saison="5" class="tab-episode "><a class="episodeData"><span>7</span><div>Episode 7</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-7" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="8" saison="5" class="tab-episode "><a class="episodeData"><span>8</span><div>Episode 8</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-8" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="9" saison="5" class="tab-episode "><a class="episodeData"><span>9</span><div>Episode 9</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-9" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="10" saison="5" class="tab-episode "><a class="episodeData"><span>10</span><div>Episode 10</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-10" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="11" saison="5" class="tab-episode "><a class="episodeData"><span>11</span><div>Episode 11</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-11" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li><li episode="12" saison="5" class="tab-episode "><a class="episodeData"><span>12</span><div>Episode 12</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/french.png"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-5-episode-12" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li></ul></div><div class="tab-episodes saison-6" style="display: none;"><ul><li episode="1" saison="6" class="tab-episode"><a class="episodeData"><span>1</span><div>Episode 1</div></a><i style="margin-left:calc(100% - 375px);"><img style="margin-left:10px;" src="/../images/flags/english.png"></i><span active="false" style="float:right;font-size: 1.2em;color:" id="saison-6-episode-1" class="isViewed glyphicon glyphicon-eye-open" aria-hidden="true">&nbsp;</span></li></ul></div></div>
-                     <!--End tabs-episode-base-->
                   </div>
-                  <!--End tabs_base-->
                </div>
-
-               <!--End season-episode-container-->
+               <!-- Sidebar -->
+               <div id="sidebar-wrapper">
+                  <div id="disqus_thread"><iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="http://disqus.com/embed/comments/?base=default&amp;version=af4d24f03c6d1eed3c6428f787eb227c&amp;f=streamflix&amp;t_u=http%3A%2F%2F127.0.0.1%3A1338%2Fserie%2Fshameless-us&amp;t_d=Stream%20Flix%20-%20Shameless%20(US)&amp;t_t=Stream%20Flix%20-%20Shameless%20(US)&amp;s_o=default" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 335px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe><iframe id="indicator-north" name="indicator-north" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 492px !important; border: none !important; overflow: hidden !important; top: 0px !important; min-width: 492px !important; max-width: 492px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;"></iframe><iframe id="indicator-south" name="indicator-south" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 492px !important; border: none !important; overflow: hidden !important; bottom: 0px !important; min-width: 492px !important; max-width: 492px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;"></iframe></div>
+                  <noscript>Please enable JavaScript to view the &lt;a href="https://disqus.com/?ref_noscript" rel="nofollow"&gt;comments powered by Disqus.&lt;/a&gt;</noscript>
+               </div>
             </div>
+            <script>
+               var serie = {"idSerie":2880,"slug":"shameless-us","year_start":"2011-01-09","original_title":"Shameless (US)","poster_url":"http://fr.web.img4.acsta.net/medias/nmedia/18/77/63/03/19626801.jpg","format_time":45,"synopsis":"Pour les enfants Gallagher, la vie est tout sauf un long fleuve tranquille. Fiona, l'aînée, âgée de 20 ans, élève du mieux possible sa soeur et ses quatre frères. Leur mère les a abandonnés. Quant à leur père, Frank, paumé, chômeur et alcoolique, il dilapide l'argent des allocations familiales.","actors":"William H. Macy, Emmy Rossum, Jeremy Allen White, Cameron Monaghan, Emma Kenney","nationality":"U.S.A.","genre":"Comédie, Drame","french_title":"Shameless (US)","creators":"","total_seasons":6,"user_rating":"4.4248023","last_inserted_episode":"2016-01-09T23:00:00.000Z"} // only the serie
+               var structSerie; // serie with seasons & episodes
+               var languages = [];
+               var players = [];
+               var favoriteLanguage;
+               var favoritePlayer;
+               var season;
+               var episode;
+               var historique;
+            </script>
          </div>
-      </div>
-   </div>
-</div>
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-
-            <div id="disqus_thread"><iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="http://disqus.com/embed/comments/?base=default&amp;version=af4d24f03c6d1eed3c6428f787eb227c&amp;f=streamflix&amp;t_u=http%3A%2F%2F127.0.0.1%3A1338%2Fserie%2Fshameless-us&amp;t_d=Stream%20Flix%20-%20Shameless%20(US)&amp;t_t=Stream%20Flix%20-%20Shameless%20(US)&amp;s_o=default" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 335px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe><iframe id="indicator-north" name="indicator-north" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 492px !important; border: none !important; overflow: hidden !important; top: 0px !important; min-width: 492px !important; max-width: 492px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;"></iframe><iframe id="indicator-south" name="indicator-south" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 492px !important; border: none !important; overflow: hidden !important; bottom: 0px !important; min-width: 492px !important; max-width: 492px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;"></iframe></div>
-            <noscript>Please enable JavaScript to view the &lt;a href="https://disqus.com/?ref_noscript" rel="nofollow"&gt;comments powered by Disqus.&lt;/a&gt;</noscript>
-        </div>
-</div>
-
-<script>
-    var serie = {"idSerie":2880,"slug":"shameless-us","year_start":"2011-01-09","original_title":"Shameless (US)","poster_url":"http://fr.web.img4.acsta.net/medias/nmedia/18/77/63/03/19626801.jpg","format_time":45,"synopsis":"Pour les enfants Gallagher, la vie est tout sauf un long fleuve tranquille. Fiona, l'aînée, âgée de 20 ans, élève du mieux possible sa soeur et ses quatre frères. Leur mère les a abandonnés. Quant à leur père, Frank, paumé, chômeur et alcoolique, il dilapide l'argent des allocations familiales.","actors":"William H. Macy, Emmy Rossum, Jeremy Allen White, Cameron Monaghan, Emma Kenney","nationality":"U.S.A.","genre":"Comédie, Drame","french_title":"Shameless (US)","creators":"","total_seasons":6,"user_rating":"4.4248023","last_inserted_episode":"2016-01-09T23:00:00.000Z"} // only the serie
-    var structSerie; // serie with seasons & episodes
-    var languages = [];
-    var players = [];
-    var favoriteLanguage;
-    var favoritePlayer;
-    var season;
-    var episode;
-    var historique;
-</script>
-
-    </div>
-
-
-
-    <script src="http://streamflix.pw/js/dependencies/jquery-2.1.4.min.js"></script>
-    <script src="http://streamflix.pw/js/dependencies/bootstrap.min.js"></script>
-    <script src="http://streamflix.pw/js/dependencies/hammer.min.js"></script>
-    <script src="http://streamflix.pw/js/dependencies/jquery.tosrus.min.all.js"></script>
-    <script src="http://streamflix.pw/js/utils.js"></script>
-    <script src="http://streamflix.pw/js/serieDetails.js"></script>
-
-  </body>
- </html>
+         <script src="http://streamflix.pw/js/dependencies/jquery-2.1.4.min.js"></script>
+         <script src="http://streamflix.pw/js/dependencies/bootstrap.min.js"></script>
+         <script src="http://streamflix.pw/js/dependencies/hammer.min.js"></script>
+         <script src="http://streamflix.pw/js/dependencies/jquery.tosrus.min.all.js"></script>
+         <script src="http://streamflix.pw/js/utils.js"></script>
+         <script src="http://streamflix.pw/js/serieDetails.js"></script>
+   </body>
+</html>
